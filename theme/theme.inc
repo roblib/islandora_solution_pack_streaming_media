@@ -50,9 +50,9 @@ function islandora_streaming_preprocess_islandora_streaming(array &$variables) {
     $sources = islandora_streaming_xml_to_array($object['STREAMING']->content);
   }
 
+  drupal_alter('islandora_streaming_sources', $sources);
   $video_params['sources'] = $sources;
-
   // Get Viewer
   $viewer = islandora_get_viewer($video_params, 'islandora_streaming_viewers', $object);
   $variables['islandora_content'] = $viewer;
-  }
+}
