@@ -4,6 +4,11 @@
 
 Create and manage Islandora objects representing streaming resources.
 
+**Update 2018 May: RTMP streaming from our server no longer works with today's browsers. Our current solution is using HLS streaming. This is an option that can be enabled in Islandora Video.js, (and requires a javascript file to be added to the video-js library folder). With our local  Wowza streaming server, a working streaming source looks like:**
+
+* URL: http://[streaming-server]:1935/vod/mp4:video.mp4/playlist.m3u8
+* Mime: application/x-mpegURL
+
 ## Requirements
 
 This module requires the following modules/libraries:
